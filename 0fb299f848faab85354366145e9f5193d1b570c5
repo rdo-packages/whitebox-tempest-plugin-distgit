@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b93bdd72_c14be05a",
+        "filename": "python-whitebox-tests-tempest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-11-23T05:39:01Z",
+      "side": 1,
+      "message": "Needs spaces crudini \u003e\u003d 0.9.3",
+      "range": {
+        "startLine": 48,
+        "startChar": 12,
+        "endLine": 48,
+        "endChar": 26
+      },
+      "revId": "0fb299f848faab85354366145e9f5193d1b570c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8898195c_2e0331a9",
+        "filename": "python-whitebox-tests-tempest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-11-23T05:39:01Z",
+      "side": 1,
+      "message": "same",
+      "revId": "0fb299f848faab85354366145e9f5193d1b570c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4944e29_7f69fbc5",
+        "filename": "python-whitebox-tests-tempest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-11-23T05:39:01Z",
+      "side": 1,
+      "message": "we don\u0027t have this package in RDO/CentOS8, so if really needed need to add it via following https://www.rdoproject.org/documentation/requirements/#adding-a-new-requirement-to-rdo",
+      "range": {
+        "startLine": 53,
+        "startChar": 12,
+        "endLine": 53,
+        "endChar": 21
+      },
+      "revId": "0fb299f848faab85354366145e9f5193d1b570c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
