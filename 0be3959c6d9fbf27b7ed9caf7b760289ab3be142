@@ -22,6 +22,30 @@
       "revId": "0be3959c6d9fbf27b7ed9caf7b760289ab3be142",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f68453dc_1619c689",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-14T15:43:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "329aa143_2ffc487e",
+      "range": {
+        "startLine": 14,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 19
+      },
+      "revId": "0be3959c6d9fbf27b7ed9caf7b760289ab3be142",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
