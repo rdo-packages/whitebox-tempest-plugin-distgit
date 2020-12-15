@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10a3ce2d_7b89a198",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-15T14:58:20Z",
+      "side": 1,
+      "message": "This should be git-core instead of git to reduce actual build requirements.",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 19
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "55520655_de16cfd3",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-15T14:58:20Z",
+      "side": 1,
+      "message": "i don\u0027t see oslo-config and oslo-log in https://opendev.org/openstack/whitebox-tempest-plugin/src/branch/master/requirements.txt, is it actually used?",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 28
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed7fa2b5_7b461532",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-15T14:58:20Z",
+      "side": 1,
+      "message": "upstream has pymysql and sshtunnel as requirements, but not here",
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
