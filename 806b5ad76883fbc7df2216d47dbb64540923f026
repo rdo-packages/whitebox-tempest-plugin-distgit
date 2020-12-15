@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "31fcdec2_0b2413cb",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-15T16:11:58Z",
+      "side": 1,
+      "message": "Done.\n\n(This was heavily inspired by designate-tempest-plugin-distgit, so maybe we need to s/git/git-core/ there too?)",
+      "parentUuid": "10a3ce2d_7b89a198",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 19
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "55520655_de16cfd3",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "d24be94b_38448ebb",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-15T16:11:58Z",
+      "side": 1,
+      "message": "We do use it, but tempest pulls it it for us. I guess since we have python3-tempst here as well, we don\u0027t need to list those?\n\nFor the record, we removed tempest and olso.log from our requirements.txt because we wanted to enable the case of installing tempest from RPM, but whitebox from pip.\n\nIn any case, I\u0027ve removed these two lines.",
+      "parentUuid": "55520655_de16cfd3",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 28
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ed7fa2b5_7b461532",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -59,6 +107,24 @@
       "writtenOn": "2020-12-15T14:58:20Z",
       "side": 1,
       "message": "upstream has pymysql and sshtunnel as requirements, but not here",
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dc3a74e8_870e5beb",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-15T16:11:58Z",
+      "side": 1,
+      "message": "So, for sshtunnel it\u0027s a bit of a weird one.\n\nWe currently need it for our downstream CI because:\n* it runs on TripleO undercloud/overcloud and needs sshtunnel to access the DB\n* we install tempest from RPMs but whitebox from source, so we need sshtunnel in upstream requirements\n\nThe plan with this RPM packaging is to use TripleO standalone multinode CI jobs natively upstream, with no undercloud/overcloud, which will not need sshtunnel. Hence me not including here in the RPM packaging - because as soon as the packaging is actually used anywhere, sshtunnel won\u0027t be needed. (And also because I don\u0027t want to go through the process of getting sshtunnel into RDO only to remove it again).\n\nI dunno how acceptable that is however: I do realize it leaves the RPM kinda broken until we finalize the CI job upstream and stop using sshtunnel (but realistically, no one would actually use the RPMs until then, and even then, the upstream CI job would be the only consumer for the RPMs).\n\nAs for pymysql, yeah, I\u0027ll add it.",
+      "parentUuid": "ed7fa2b5_7b461532",
       "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
