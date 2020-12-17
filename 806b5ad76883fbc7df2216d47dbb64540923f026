@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "d724149e_828c76dd",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-17T09:10:55Z",
+      "side": 1,
+      "message": "We did :)\n\nhttps://review.rdoproject.org/r/#/c/30996/",
+      "parentUuid": "31fcdec2_0b2413cb",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 19
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "55520655_de16cfd3",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "042f485a_a63f2ac0",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-17T09:10:55Z",
+      "side": 1,
+      "message": "we shouldn\u0027t trust in indirect requires. If a python module is imported in the project, it should be explicitly included as requirement in the rpm.\n\nWRT removing them from requirements.txt. I have no the whole context but I\u0027d say it\u0027s a bit strange that you mix rpms and pip in upstream jobs. Don\u0027t you test it in devstack or other non-rpm installations?. I\u0027d say it breaks a bit the upstream concept of managing dependencies via requirements project and testing oslo libraries updates via reviews to upper-constraints.txt.",
+      "parentUuid": "d24be94b_38448ebb",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 28
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ed7fa2b5_7b461532",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -125,6 +173,24 @@
       "side": 1,
       "message": "So, for sshtunnel it\u0027s a bit of a weird one.\n\nWe currently need it for our downstream CI because:\n* it runs on TripleO undercloud/overcloud and needs sshtunnel to access the DB\n* we install tempest from RPMs but whitebox from source, so we need sshtunnel in upstream requirements\n\nThe plan with this RPM packaging is to use TripleO standalone multinode CI jobs natively upstream, with no undercloud/overcloud, which will not need sshtunnel. Hence me not including here in the RPM packaging - because as soon as the packaging is actually used anywhere, sshtunnel won\u0027t be needed. (And also because I don\u0027t want to go through the process of getting sshtunnel into RDO only to remove it again).\n\nI dunno how acceptable that is however: I do realize it leaves the RPM kinda broken until we finalize the CI job upstream and stop using sshtunnel (but realistically, no one would actually use the RPMs until then, and even then, the upstream CI job would be the only consumer for the RPMs).\n\nAs for pymysql, yeah, I\u0027ll add it.",
       "parentUuid": "ed7fa2b5_7b461532",
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c40949c_cc76124e",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-17T09:10:55Z",
+      "side": 1,
+      "message": "It\u0027s fine if sshtunnel is an optional dep not required for rpm installations. I\u0027d suggest to make the import optional too in the code and make it depend on some config parameter or even discover if the module exist in the server:\n\nhttps://opendev.org/openstack/whitebox-tempest-plugin/src/commit/61d852056d3539d461e1a7e571f69001f40aa24e/whitebox_tempest_plugin/services/clients.py#L21\n\nTo avoid failures when loading clients.py until it\u0027s removed from code.",
+      "parentUuid": "dc3a74e8_870e5beb",
       "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
