@@ -192,6 +192,30 @@
     },
     {
       "key": {
+        "uuid": "5a5366bf_f03f7def",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-17T16:01:25Z",
+      "side": 1,
+      "message": "I got it now, thanks!",
+      "parentUuid": "6126de84_e8b1e604",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 28
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ed7fa2b5_7b461532",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -257,6 +281,24 @@
       "side": 1,
       "message": "See https://review.opendev.org/c/openstack/whitebox-tempest-plugin/+/767573 :)",
       "parentUuid": "6c40949c_cc76124e",
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ab15c34_5a59ab2c",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-12-17T16:01:25Z",
+      "side": 1,
+      "message": "LGTM",
+      "parentUuid": "276c76f1_1746c61c",
       "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
