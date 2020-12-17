@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "943f3ad0_5f3ce7f0",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-17T15:51:55Z",
+      "side": 1,
+      "message": "Hah, looks like I missed a `git pull` somewhere along the line ;)",
+      "parentUuid": "d724149e_828c76dd",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 19
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "55520655_de16cfd3",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -144,6 +168,30 @@
     },
     {
       "key": {
+        "uuid": "6126de84_e8b1e604",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-17T15:51:55Z",
+      "side": 1,
+      "message": "Upstream jobs are pure devstack, and use only pip.\n\n*Downstream* jobs install tempest from RPM, but because so far whitebox is not packaged, install whitebox from pip.\n\nI\u0027ve proposed a patch to improve/clarify our upstream requirements here: https://review.opendev.org/c/openstack/whitebox-tempest-plugin/+/767573\n\nI\u0027m going to use that to propose a new version of this .spec patch.",
+      "parentUuid": "042f485a_a63f2ac0",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 28
+      },
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ed7fa2b5_7b461532",
         "filename": "python3-whitebox-tests-tempest.spec",
         "patchSetId": 6
@@ -191,6 +239,24 @@
       "side": 1,
       "message": "It\u0027s fine if sshtunnel is an optional dep not required for rpm installations. I\u0027d suggest to make the import optional too in the code and make it depend on some config parameter or even discover if the module exist in the server:\n\nhttps://opendev.org/openstack/whitebox-tempest-plugin/src/commit/61d852056d3539d461e1a7e571f69001f40aa24e/whitebox_tempest_plugin/services/clients.py#L21\n\nTo avoid failures when loading clients.py until it\u0027s removed from code.",
       "parentUuid": "dc3a74e8_870e5beb",
+      "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "276c76f1_1746c61c",
+        "filename": "python3-whitebox-tests-tempest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 265
+      },
+      "writtenOn": "2020-12-17T15:51:55Z",
+      "side": 1,
+      "message": "See https://review.opendev.org/c/openstack/whitebox-tempest-plugin/+/767573 :)",
+      "parentUuid": "6c40949c_cc76124e",
       "revId": "806b5ad76883fbc7df2216d47dbb64540923f026",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
