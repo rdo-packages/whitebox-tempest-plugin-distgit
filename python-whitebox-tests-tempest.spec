@@ -53,6 +53,7 @@ Requires:   python3-tempest
 Requires:   python3-oslo-log
 Requires:   python3-oslo-serialization
 Requires:   python3-oslo-config
+Requires:   python3-sshtunnel
 
 %description -n python3-%{service}-tests-tempest
 %{common_desc}
