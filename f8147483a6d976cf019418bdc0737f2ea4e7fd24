@@ -16,6 +16,24 @@
       "message": "We need to pin to 766ff042bd8528043947f16c84d13c9645d258d1 as 0.0.2 is 144 commits behind master.\nThe other solution is to ask upstream to issue new tag",
       "revId": "f8147483a6d976cf019418bdc0737f2ea4e7fd24",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1734b5d_211292a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-26T13:39:07Z",
+      "side": 1,
+      "message": "https://storyboard.openstack.org/#!/story/2011076\n\nLet\u0027s keep this patch on hold, it\u0027s not required by tempest so it won\u0027t block anyhting",
+      "parentUuid": "f0037f41_f0e83062",
+      "revId": "f8147483a6d976cf019418bdc0737f2ea4e7fd24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
