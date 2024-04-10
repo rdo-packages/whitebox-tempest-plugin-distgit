@@ -54,6 +54,8 @@ Requires:   python3-oslo-log
 Requires:   python3-oslo-serialization
 Requires:   python3-oslo-config
 Requires:   python3-sshtunnel
+Requires:   python3-netifaces
+Requires:   scapy
 
 %description -n python3-%{service}-tests-tempest
 %{common_desc}
