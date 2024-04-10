@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5307d38_46465009",
+        "filename": "python-whitebox-tests-tempest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 783
+      },
+      "writtenOn": "2024-04-10T11:55:56Z",
+      "side": 1,
+      "message": "looked in code of repo for all deps.\ntesttools imported and used many times but isn\u0027t here, lets get that in too.",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 17
+      },
+      "revId": "77f2c296bfd177d763f6d0ca7f1a538bec6a3020",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
