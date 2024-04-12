@@ -1,10 +1,15 @@
-%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg 0
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %global service whitebox
 %global plugin whitebox-tempest-plugin
 %global module whitebox_tempest_plugin
 
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 766ff042bd8528043947f16c84d13c9645d258d1
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 
 %global common_desc \
 This package contains Tempest tests of the "whitebox" variety. They verify \
@@ -12,13 +17,13 @@ things not exposed through the REST APIs. Additionally it provides a plugin \
 to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    0.0.3
+Release:    0.1%{?alphatag}%{?dist}
 Summary:    Whitebox Tempest tests
 License:    ASL 2.0
 URL:        https://opendev.org/openstack/%{plugin}
 
-Source0:    https://tarballs.opendev.org/openstack/%{plugin}-%{upstream_version}.tar.gz
+Source0:    http://opendev.org/openstack/%{plugin}/archive/%{upstream_version}.tar.gz#/%{module}-%{shortcommit}.tar.gz
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:  https://tarballs.opendev.org/openstack/%{plugin}-%{upstream_version}.tar.gz
@@ -83,3 +88,5 @@ rm -rf %{module}.egg-info
 %{python3_sitelib}/*.egg-info
 
 %changelog
+* Fri Apr 12 2024 Alfredo Moralejo <amoralej@redhat.com> - 0.0.3-0.1.766ff04git
+- Update to pre 0.0.3 (766ff042bd8528043947f16c84d13c9645d258d1)
