@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
 %global service whitebox
 %global plugin whitebox-tempest-plugin
 %global module whitebox_tempest_plugin
@@ -12,8 +12,8 @@ things not exposed through the REST APIs. Additionally it provides a plugin \
 to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    0.0.3
+Release:    1%{?dist}
 Summary:    Whitebox Tempest tests
 License:    ASL 2.0
 URL:        https://opendev.org/openstack/%{plugin}
@@ -83,3 +83,6 @@ rm -rf %{module}.egg-info
 %{python3_sitelib}/*.egg-info
 
 %changelog
+* Wed Sep 25 2024 RDO <dev@lists.rdoproject.org> 0.0.3-1
+- Update to 0.0.3
+
