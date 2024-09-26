@@ -18,10 +18,10 @@ Summary:    Whitebox Tempest tests
 License:    ASL 2.0
 URL:        https://opendev.org/openstack/%{plugin}
 
-Source0:    https://tarballs.opendev.org/openstack/%{plugin}-%{upstream_version}.tar.gz
+Source0:    https://tarballs.opendev.org/openstack/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101:  https://tarballs.opendev.org/openstack/%{plugin}-%{upstream_version}.tar.gz
+Source101:  https://tarballs.opendev.org/openstack/%{plugin}/%{plugin}-%{upstream_version}.tar.gz.asc
 Source102:  https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
