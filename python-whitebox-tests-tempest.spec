@@ -5,6 +5,8 @@
 %global module whitebox_tempest_plugin
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{?dlrn: %global tarsources %{plugin}}
+%{!?dlrn: %global tarsources %{module}}
 
 %global common_desc \
 This package contains Tempest tests of the "whitebox" variety. They verify \
@@ -18,10 +20,10 @@ Summary:    Whitebox Tempest tests
 License:    ASL 2.0
 URL:        https://opendev.org/openstack/%{plugin}
 
-Source0:    https://tarballs.opendev.org/openstack/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
+Source0:    https://tarballs.opendev.org/openstack/%{plugin}/%{tarsources}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101:  https://tarballs.opendev.org/openstack/%{plugin}/%{plugin}-%{upstream_version}.tar.gz.asc
+Source101:  https://tarballs.opendev.org/openstack/%{plugin}/%{tarsources}-%{upstream_version}.tar.gz.asc
 Source102:  https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
@@ -63,7 +65,7 @@ Requires:   python3-sshtunnel
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -n %{plugin}-%{upstream_version} -S git
+%autosetup -n %{tarsources}-%{upstream_version} -S git
 
 # Let's handle dependencies ourseleves
 %py_req_cleanup
